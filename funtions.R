@@ -30,6 +30,6 @@ load_and_merge_data <- function(data_directory, project_name = "SeuratProject") 
     sr_merged <- seurat_list[[1]]
   }
 
-  sr_merged <- JoinLayers(sr_merged)
+  sr_merged <- JoinLayers(sr_merged) #Join layer in Seuratv5
   return(sr_merged)
 }
