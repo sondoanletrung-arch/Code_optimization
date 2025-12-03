@@ -62,12 +62,10 @@ infercnv_obj = infercnv::run(
 )
 
 
-# 5. FINAL OUTPUT AND VISUALIZATION
-# ------------------------------------------------------------------------------
+#Save
 
 # Save the final annotated Seurat object
-saveRDS(sr, file = file.path(work_dir, "GSE282701_Final_Annotated.rds"))
-message(">>> Final Seurat object saved to: ", file.path(work_dir, "GSE282701_Final_Annotated.rds"))
+saveRDS(sr, file = file.path(work_dir, "GSE282701_Annotated.rds"))
 
 # Plot UMAP based on cell type annotation
 DimPlot(sr, reduction = "umap", group.by = "SingleR.labels", label = TRUE, repel = TRUE) + 
@@ -76,5 +74,3 @@ DimPlot(sr, reduction = "umap", group.by = "SingleR.labels", label = TRUE, repel
 # Plot UMAP based on tissue type
 DimPlot(sr, reduction = "umap", group.by = "TissueType", label = TRUE, repel = TRUE) + 
     ggtitle("Tissue Type (Tumor vs. Paracancerous)")
-
-message(">>> Full pipeline execution complete!")
