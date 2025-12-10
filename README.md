@@ -1,2 +1,4 @@
 # Code_optimization
-blabla
+Reduce the cost of computations.
+Optimize un-optimized Code.
+Build the Code Style.
